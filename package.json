@@ -1,0 +1,19 @@
+{
+  "name": "cesi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/public/css/:./src/public/sass/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemrode/superCesi.git"
+  },
+  "author": "kemrode",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kemrode/superCesi/issues"
+  },
+  "homepage": "https://github.com/kemrode/superCesi#readme"
+}
