@@ -3,4 +3,6 @@
 
 .HomeMenuView{
   background-color: blue;
+  @include flexColumn();
+  flex: 1;
 }
