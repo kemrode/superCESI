@@ -8,6 +8,11 @@
         <servlet-class>com.example.supercesi.TestServlet</servlet-class>
     </servlet>
     <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>*.css</url-pattern>
         <url-pattern>*.js</url-pattern>
