@@ -10,17 +10,14 @@
     <title>Super0</title>
 </head>
 <body>
-<!--<h1><%= "Hello World!" %></h1>-->
-<!--<k:if test="${true}">Yo lé gros !!</k:if>-->
-<!--<a href="hello-servlet">Hello Servlet</a>-->
 <div class="MainView">
     <div class="HomeMenuView">
         <p>HomeMenuView</p>
-        <!--<a href="./WEB-INF/test.jsp">voir le test</a>-->
+        <!--<a href="./WEB-INF/Accueil.jsp">voir le test</a>-->
     </div>
     <div class="HomeMapSuperView">
         <div class="MapBox">
-            <p>MapBox</p>
+            <%@include file="mapBox.jsp"%>
         </div>
         <div class="SuperCardScrollview">
             <p>SuperCardScrollview</p>

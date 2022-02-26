@@ -16,7 +16,7 @@
 <%--<div class="MainView">--%>
 <%--    <div class="HomeMenuView">--%>
 <%--        <p>HomeMenuView</p>--%>
-<%--        <!--<a href="./WEB-INF/test.jsp">voir le test</a>-->--%>
+<%--        <!--<a href="./WEB-INF/Accueil.jsp">voir le test</a>-->--%>
 <%--    </div>--%>
 <%--    <div class="HomeMapSuperView">--%>
 <%--        <div class="MapBox">--%>

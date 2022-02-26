@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 public class TestServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/test.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/Accueil.jsp").forward(request, response);
     }
 
     @Override
