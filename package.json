@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kemrode/superCesi/issues"
   },
-  "homepage": "https://github.com/kemrode/superCesi#readme"
+  "homepage": "https://github.com/kemrode/superCesi#readme",
+  "dependencies": {
+    "mapbox-gl": "^2.7.0"
+  }
 }

@@ -11,6 +11,22 @@
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/Accueil</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>com.example.supercesi.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SuperZeroFormServlet</servlet-name>
+        <servlet-class>com.example.supercesi.SuperZeroFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SuperZeroFormServlet</servlet-name>
+        <url-pattern>/Formulaire</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>default</servlet-name>

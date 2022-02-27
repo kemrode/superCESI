@@ -13,12 +13,12 @@
 <div class="MainView">
     <div class="HomeMenuView">
         <p>HomeMenuView</p>
-        <a href="./Formulaire">nouveau zéro en ville</a>
+        <a href="SuperZeroForm.jsp">nouveau zéro en ville</a>
         <!--<a href="./WEB-INF/Accueil.jsp">voir le test</a>-->
     </div>
     <div class="HomeMapSuperView">
         <div class="MapBox">
-<%--            <%@include file="mapBox.jsp"%>--%>
+
         </div>
         <div class="SuperCardScrollview">
             <p>SuperCardScrollview</p>
