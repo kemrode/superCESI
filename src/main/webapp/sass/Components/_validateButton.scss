@@ -1,0 +1,13 @@
+@import "../Utils/mixin.scss";
+@import "../Utils/variables.scss";
+
+.validateBtn{
+  background-color: green;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  width: 85%;
+  height: 5vh;
+  border: solid black 1px;
+  border-radius:$roundedRadius;
+}

@@ -25,6 +25,24 @@ body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: auto;
+}
+
+#menuView {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  background-color: aqua;
+}
+
+#formBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 3;
+  background-color: bisque;
 }
 
 .MapBox {

@@ -7,18 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta nam="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/MainView.css"/>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/MapBox.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/SuperZForm.css"/>
     <title>Super0</title>
 </head>
 <body>
 <div class="MainView">
     <div class="HomeMenuView">
-        <p>HomeMenuView</p>
-        <a href="SuperZeroForm.jsp">nouveau zéro en ville</a>
-        <!--<a href="./WEB-INF/Accueil.jsp">voir le test</a>-->
+        <div id="menuView">
+
+        </div>
+        <div id="formBox">
+            <%--        IF visitor click on item New SuperZ register, display here the form--%>
+            <%--        <a href="./Formulaire">nouveau zéro en ville</a>--%>
+            <%@include file="SuperZeroForm.jsp"%>
+        </div>
     </div>
     <div class="HomeMapSuperView">
         <div class="MapBox">
-
+            <%@ include file="mapBox.jsp"%>
         </div>
         <div class="SuperCardScrollview">
             <p>SuperCardScrollview</p>

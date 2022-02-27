@@ -1,0 +1,53 @@
+@import "../Utils/mixin.scss";
+@import "../Utils/variables.scss";
+
+.formulaire{
+  @include flexColumnJustifySpaceEvenly();
+  align-items: center;
+  flex: 1;
+}
+
+.formTitle{
+  @include flexRowJustifyCenter();
+  align-items: center;
+  &__text{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+.infoBox{
+  @include flexRowJustifyCenter();
+  width: 100%;
+  flex: 1;
+  & input {
+    border-radius:$roundedRadius;
+    width: 85%;
+    height: 5vh;
+    border: solid black 1px;
+    padding-left: 15px;
+  }
+}
+
+#incidentsBox{
+  @include flexColumnJustifySpaceEvenly();
+  align-items: center;
+  flex: 5;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+.incident {
+  @include flexColumnJustifySpaceEvenly();
+  align-items: start;
+  flex: 1;
+}
+
+.incidentCheck{
+  @include flexRowJustifyCenter();
+  align-items: center;
+}
