@@ -7,6 +7,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 @WebServlet(name = "SuperZeroFormServlet", value = "/SuperZeroFormServlet")
 public class SuperZeroFormServlet extends HttpServlet {
@@ -25,6 +27,6 @@ public class SuperZeroFormServlet extends HttpServlet {
         ConnectionForm form = new ConnectionForm();
         form.newSuperZ(request);
         request.setAttribute("form",form);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
+//        this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
     }
 }

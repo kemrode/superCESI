@@ -71,4 +71,39 @@ body {
   flex: 4;
 }
 
+.buttonsChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+
+.selectButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 5vh;
+  opacity: 0.6;
+  border: solid black 1px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+.selectButton:hover {
+  opacity: 1;
+}
+
+.selectIncident {
+  background-color: darkred;
+}
+
+.selectNewSuperZ {
+  background-color: darkgreen;
+}
+
 /*# sourceMappingURL=MainView.css.map */
