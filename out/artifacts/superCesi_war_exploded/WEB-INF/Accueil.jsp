@@ -14,6 +14,7 @@
 <div class="MainView">
     <div class="HomeMenuView">
         <p>HomeMenuView</p>
+        <a href="./Formulaire">nouveau zéro en ville</a>
         <!--<a href="./WEB-INF/Accueil.jsp">voir le test</a>-->
     </div>
     <div class="HomeMapSuperView">

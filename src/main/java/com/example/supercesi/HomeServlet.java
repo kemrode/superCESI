@@ -16,7 +16,7 @@ public class HomeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String buttonClickOn = request.getParameter("selectButton");
         if(buttonClickOn != null){
-            if(buttonClickOn == "incident"){
+            if(buttonClickOn.equals("incident")){
                 request.setAttribute("incident",buttonClickOn);
             } else {
                 request.setAttribute("superZ", buttonClickOn);
