@@ -1,0 +1,7 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.MainView{
+  @include webkitScrollbar();
+  @include flexRowJustifySpaceEvenly();
+}
