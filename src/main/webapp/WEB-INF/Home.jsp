@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="initial-scale=1,maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/MainView.css"/>
-<%--    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">--%>
-<%--    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>--%>
+    <%--    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">--%>
+    <%--    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>--%>
     <title>Super0</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     </div>
     <div class="HomeMapSuperView">
         <div class="MapBox">
-<%--            <%@include file="mapBox.jsp"%>--%>
+            <%--            <%@include file="mapBox.jsp"%>--%>
         </div>
         <div class="SuperCardScrollview">
             <p>SuperCardScrollview</p>
