@@ -15,13 +15,13 @@ public class HomeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String buttonClickOn = request.getParameter("selectButton");
-        if(buttonClickOn != null){
-            if(buttonClickOn == "incident"){
-                request.setAttribute("incident",buttonClickOn);
-            } else {
-                request.setAttribute("superZ", buttonClickOn);
-            }
-        }
+//        if(buttonClickOn != null){
+//            if(buttonClickOn == "incident"){
+//                request.setAttribute("incident",buttonClickOn);
+//            } else {
+//                request.setAttribute("superZ", buttonClickOn);
+//            }
+//        }
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
 
     }
