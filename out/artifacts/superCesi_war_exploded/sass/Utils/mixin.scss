@@ -1,0 +1,58 @@
+//webkit
+@mixin webkitScrollbar{
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: auto;
+  height: 100vh;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+//flex Row
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+}
+@mixin flexRowJustifyCenter {
+  @include flexRow();
+  justify-content: center;
+}
+@mixin flexRowAlignItemsCenter {
+  @include flexRow();
+  align-items: center;
+}
+@mixin flexRowJustifyFlexStart {
+  @include flexRow();
+  justify-content: flex-start;
+}
+@mixin  flexRowJustifySpaceEvenly{
+  @include flexRow();
+  justify-content: space-evenly;
+}
+
+//flex Column
+@mixin flexColumn{
+  display: flex;
+  flex-direction: column;
+}
+@mixin flexColumnJustifyCenter{
+  @include flexColumn();
+  justify-content: center;
+}
+@mixin flexColumnJustifyFlexStart{
+  @include flexColumn();
+  justify-content: flex-start;
+}
+@mixin flexColumnJustifySpaceEvenly{
+  @include flexColumn();
+  justify-content: space-evenly;
+}
+@mixin flexColumnAlignItemsCenter{
+  @include flexColumn();
+  align-items: center;
+}
+
+//flex Corner Radius
+@mixin cornerRadiusRounded{
+  border-radius: 45px;
+}

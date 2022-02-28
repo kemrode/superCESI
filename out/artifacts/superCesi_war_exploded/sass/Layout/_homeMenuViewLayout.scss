@@ -1,0 +1,8 @@
+@import "../Utils/mixin";
+@import "../Utils/variables";
+
+.HomeMenuView{
+  background-color: blue;
+  @include flexColumn();
+  flex: 1;
+}
