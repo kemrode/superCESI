@@ -27,6 +27,6 @@ public class SuperZeroFormServlet extends HttpServlet {
         ConnectionForm form = new ConnectionForm();
         form.newSuperZ(request);
         request.setAttribute("form",form);
-//        this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
     }
 }

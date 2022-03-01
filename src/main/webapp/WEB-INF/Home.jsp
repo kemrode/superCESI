@@ -19,27 +19,21 @@
 
         </div>
         <div id="formBox">
-            <div class="buttonsChoice">
-                <% String selectIncident = ""; %>
-                <input type="submit" class="selectButton selectIncident" name="incident" value="incident">
-                    <% selectIncident = "incident"; %>
+            <form method="post" class="buttonsChoice">
+                <input type="submit" class="selectedButton selectIncident" name="selectedButton" value="incident">
                 </input>
-                <input type="submit" class="selectButton selectNewSuperZ" name="superZ" value="superZ">
-                    <% selectIncident = "superZ";%>
+                <input type="submit" class="selectedButton selectNewSuperZ" name="selectedButton" value="superZ">
                 </input>
-            </div>
-            <%--        IF visitor click on item New SuperZ register, display here the form--%>
-            <%--        <a href="./Formulaire">nouveau zéro en ville</a>--%>
+            </form>
             <k:choose>
-                <k:when test="incident">
-                    <%@include file="SuperZeroForm.jsp"%>
+                <k:when test="${selectedButton == 'incident'}">
+                    <p>Tous des cons</p>
                 </k:when>
-                <k:when test="superZ">
-<%--                    <%@include file="SuperZeroForm.jsp"%>--%>
+                <k:when test="${selectedButton == 'superZ'}">
+                    <%@include file="SuperZeroForm.jsp"%>
                 </k:when>
                 <k:otherwise></k:otherwise>
             </k:choose>
-<%--            <%@include file="SuperZeroForm.jsp"%>--%>
         </div>
     </div>
     <div class="HomeMapSuperView">

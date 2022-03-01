@@ -9,19 +9,16 @@ import java.io.IOException;
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        String selectedChoise = "";
+//        request.setAttribute("selectedChoice",selectedChoise);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String buttonClickOn = request.getParameter("selectButton");
-//        if(buttonClickOn != null){
-//            if(buttonClickOn == "incident"){
-//                request.setAttribute("incident",buttonClickOn);
-//            } else {
-//                request.setAttribute("superZ", buttonClickOn);
-//            }
-//        }
+        String selectedChoice = request.getParameter("selectedButton");
+        request.setAttribute("selectedButton", selectedChoice);
+
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
 
     }
