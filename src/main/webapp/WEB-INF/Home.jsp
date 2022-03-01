@@ -10,24 +10,22 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/MapBox.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/SuperZForm.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/incidentDeclaration.css"/>
     <title>Super0</title>
 </head>
 <body>
 <div class="MainView">
     <div class="HomeMenuView">
         <div id="menuView">
-
         </div>
         <div id="formBox">
             <form method="post" class="buttonsChoice">
-                <input type="submit" class="selectedButton selectIncident" name="selectedButton" value="incident">
-                </input>
-                <input type="submit" class="selectedButton selectNewSuperZ" name="selectedButton" value="superZ">
-                </input>
+                <input type="submit" class="selectedButton selectIncident" name="selectedButton" value="incident"/>
+                <input type="submit" class="selectedButton selectNewSuperZ" name="selectedButton" value="superZ"/>
             </form>
             <k:choose>
                 <k:when test="${selectedButton == 'incident'}">
-                    <p>Tous des cons</p>
+                    <%@include file="IncidentForm.jsp"%>
                 </k:when>
                 <k:when test="${selectedButton == 'superZ'}">
                     <%@include file="SuperZeroForm.jsp"%>
@@ -41,7 +39,11 @@
             <%@ include file="mapBox.jsp"%>
         </div>
         <div class="SuperCardScrollview">
-            <p>SuperCardScrollview</p>
+            <ul>
+                <k:forEach var="superZ" items="${list}">
+                    <li><k:out value="${ superZ.Name }"/></li>
+                </k:forEach>
+            </ul>
         </div>
     </div>
 </div>

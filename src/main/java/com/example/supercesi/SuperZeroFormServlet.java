@@ -25,8 +25,8 @@ public class SuperZeroFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ConnectionForm form = new ConnectionForm();
-        form.newSuperZ(request);
-        request.setAttribute("form",form);
+        SuperZeroModel superZ = form.newSuperZ(request);
+//        request.setAttribute("form",form);
         this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
     }
 }

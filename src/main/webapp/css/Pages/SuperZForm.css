@@ -32,35 +32,6 @@
   padding-left: 15px;
 }
 
-#incidentsBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  flex: 5;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-#incidentsBox::-webkit-scrollbar {
-  display: none;
-}
-
-.incident {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: start;
-  flex: 1;
-}
-
-.incidentCheck {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 .validateBtn {
   margin-bottom: 15px;
   width: 50%;
@@ -79,6 +50,41 @@
 }
 .validateBtn input:hover {
   opacity: 1;
+}
+
+.buttonsChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 8vh;
+}
+
+.selectedButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  height: 5vh;
+  opacity: 0.6;
+  border: solid black 1px;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+.selectedButton:hover {
+  opacity: 1;
+}
+
+.selectIncident {
+  background-color: darkred;
+}
+
+.selectNewSuperZ {
+  background-color: darkgreen;
 }
 
 /*# sourceMappingURL=SuperZForm.css.map */

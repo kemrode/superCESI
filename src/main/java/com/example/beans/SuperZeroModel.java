@@ -1,11 +1,16 @@
 package com.example.beans;
 
+import java.sql.Array;
+
 public class SuperZeroModel {
+
     public int Id;
     public String Name;
     public String PhoneNumber;
-    public String Coordinates;
-    public String[] BusinessIncidents;
+    public String City;
+    public String Latitude;
+    public String Longitude;
+    public Array BusinessIncidents;
 
     public int getId() {
         return Id;
@@ -31,20 +36,35 @@ public class SuperZeroModel {
         PhoneNumber = phoneNumber;
     }
 
-    public String getCoordinates() {
-        return Coordinates;
+    public String getCity() {
+        return City;
     }
 
-    public void setCoordinates(String coordinates) {
-        Coordinates = coordinates;
+    public void setCity(String city) {
+        City = city;
     }
 
-    public String[] getBusinessIncidents() {
+    public String getLatitude() {
+        return Latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        Latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return Longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        Longitude = longitude;
+    }
+
+    public Array getBusinessIncidents() {
         return BusinessIncidents;
     }
 
-    public void setBusinessIncidents(String[] businessIncidents) {
+    public void setBusinessIncidents(Array businessIncidents) {
         BusinessIncidents = businessIncidents;
     }
-
 }

@@ -27,6 +27,14 @@
         <servlet-name>SuperZeroFormServlet</servlet-name>
         <url-pattern>/Formulaire</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>IncidentServlet</servlet-name>
+        <servlet-class>com.example.supercesi.IncidentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IncidentServlet</servlet-name>
+        <url-pattern>/Incident</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>default</servlet-name>

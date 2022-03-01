@@ -28,26 +28,3 @@
     padding-left: 15px;
   }
 }
-
-#incidentsBox{
-  @include flexColumnJustifySpaceEvenly();
-  align-items: center;
-  flex: 5;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  &::-webkit-scrollbar{
-    display: none;
-  }
-}
-
-.incident {
-  @include flexColumnJustifySpaceEvenly();
-  align-items: start;
-  flex: 1;
-}
-
-.incidentCheck{
-  @include flexRowJustifyCenter();
-  align-items: center;
-}

@@ -1,0 +1,33 @@
+@import "../Utils/mixin.scss";
+@import "../Utils/variables.scss";
+
+.incidentDeclaring{
+  @include flexColumnJustifySpaceEvenly();
+  align-items: center;
+  width: 100%;
+  flex: 5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+#incidentsBox{
+  @include flexColumnJustifySpaceEvenly();
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.incident {
+  @include flexColumnJustifySpaceEvenly();
+  align-items: start;
+  flex: 1;
+}
+
+.incidentCheck{
+  @include flexRowJustifyCenter();
+  align-items: center;
+}
