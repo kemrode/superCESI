@@ -1,23 +1,20 @@
 package com.example.bdd;
 
-import com.sun.tools.javac.code.Attribute;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.PreparedStatement;
-//import com.microsoft.sqlserver.jdbc.SQLServerDriver;
 
 public class GetConnection {
 
-    private String _connectionUrl = "jdbc:sqlserver://DESKTOP-2K2J7SR\\MSSQLSERVER:1433;database=[superCesi.Database.dev];database=superCesi.Database.dev";
+    private String _connectionUrl = "jdbc:mysql://127.0.0.1:3306/superCesi_db";
     private Connection connection = null;
 
     public Connection GetConnection(){
-        loadDataBase();
         try {
-            connection = DriverManager.getConnection(_connectionUrl);
+            loadDataBase();
+            connection = DriverManager.getConnection(_connectionUrl,"root","");
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -26,7 +23,7 @@ public class GetConnection {
 
     private void loadDataBase(){
         try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }

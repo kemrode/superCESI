@@ -10,7 +10,7 @@ public class SuperZeroModel {
     public String City;
     public String Latitude;
     public String Longitude;
-    public Array BusinessIncidents;
+    public String BusinessIncidents;
 
     public int getId() {
         return Id;
@@ -60,11 +60,11 @@ public class SuperZeroModel {
         Longitude = longitude;
     }
 
-    public Array getBusinessIncidents() {
+    public String getBusinessIncidents() {
         return BusinessIncidents;
     }
 
-    public void setBusinessIncidents(Array businessIncidents) {
+    public void setBusinessIncidents(String businessIncidents) {
         BusinessIncidents = businessIncidents;
     }
 }

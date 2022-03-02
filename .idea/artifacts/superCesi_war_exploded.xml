@@ -14,7 +14,7 @@
           <element id="module-output" name="superCesi" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:10.2.0.jre11" />
+          <element id="library" level="project" name="Maven: org.mariadb.jdbc:mariadb-java-client:$VERSION" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -31,7 +31,7 @@ public class SuperZConnection {
                 superZ.City = result.getString("City");
                 superZ.Latitude = result.getString("Latitude");
                 superZ.Longitude = result.getString("Longitude");
-                superZ.BusinessIncidents = result.getArray("BusinessIncidents");
+                superZ.BusinessIncidents = result.getString("BusinessIncidents");
                 allSuperZ.add(superZ);
             }
             result.close();
@@ -55,7 +55,7 @@ public class SuperZConnection {
                 preparedStatement.setString(3, superZToPost.getLatitude());
                 preparedStatement.setString(4, superZToPost.getLongitude());
                 preparedStatement.setString(5, superZToPost.getCity());
-                preparedStatement.setArray(6, superZToPost.getBusinessIncidents());
+                preparedStatement.setString(6, superZToPost.getBusinessIncidents());
                 preparedStatement.executeQuery();
                 preparedStatement.close();
             }catch (SQLException e){
