@@ -40,8 +40,8 @@
         </div>
         <div class="SuperCardScrollview">
             <ul>
-                <k:forEach var="superZ" items="${list}">
-                    <li><k:out value="${ superZ.Name }"/></li>
+                <k:forEach var="superZ" items="${ list }">
+                    <li><k:out value="${ superZ }"/></li>
                 </k:forEach>
             </ul>
         </div>

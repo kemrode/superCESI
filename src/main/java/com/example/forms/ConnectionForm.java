@@ -14,6 +14,9 @@ public class ConnectionForm {
         newSuperZ.Name = request.getParameter("superName");
         newSuperZ.PhoneNumber = request.getParameter("superPhone");
         newSuperZ.City = request.getParameter("city");
+        newSuperZ.Longitude = "0.123456789";
+        newSuperZ.Latitude = "0.123456789";
+        newSuperZ.BusinessIncidents = "Incendie, Braquage, Manifestations pour la liberté";
 
         return newSuperZ;
     }
