@@ -11,8 +11,6 @@ import java.sql.PreparedStatement;
 
 public class GetConnection {
 
-//    private String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-//    private String _connectionUrl = "jdbc:sqlserver://DESKTOP-2K2J7SR\\MSSQLSERVER:1433;DatabaseName=superCesi.Database.dev;integratedSecurity=true";
     private String _connectionUrl = "jdbc:sqlserver://DESKTOP-2K2J7SR\\MSSQLSERVER:1433;database=[superCesi.Database.dev];database=superCesi.Database.dev";
     private Connection connection = null;
 
