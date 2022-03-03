@@ -3,7 +3,6 @@ package com.example.supercesi;
 import com.example.bdd.GetConnection;
 import com.example.bdd.IncidentConnection;
 import com.example.beans.IncidentModel;
-import com.example.forms.ConnectionForm;
 import com.example.forms.IncidentForm;
 
 import javax.servlet.*;
@@ -23,7 +22,7 @@ public class IncidentServlet extends HttpServlet {
         IncidentForm form = new IncidentForm();
         IncidentModel newIncident = form.newIncident(request);
         GetConnection connection = new GetConnection();
-        IncidentConnection incidentConnection = new IncidentConnection(connection.GetConnection());
+        IncidentConnection incidentConnection = new IncidentConnection(connection.getConnection());
         incidentConnection.PostNewIncident(newIncident);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }

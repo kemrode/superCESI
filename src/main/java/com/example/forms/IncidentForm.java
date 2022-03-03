@@ -3,13 +3,12 @@ package com.example.forms;
 import com.example.beans.IncidentModel;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
-
 public class IncidentForm {
 
     //Constructor
     public IncidentForm(){};
 
+    //Public Method
     public IncidentModel newIncident(HttpServletRequest request){
         IncidentModel newIncident = new IncidentModel();
         newIncident.setCity(request.getParameter("incidentCity"));

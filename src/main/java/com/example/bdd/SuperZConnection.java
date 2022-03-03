@@ -21,7 +21,6 @@ public class SuperZConnection {
 
     //Get Methods
     public List<SuperZeroModel> GetAllSuperZ(){
-        _connection = _getConnection.GetConnection();
         List<SuperZeroModel> allSuperZ = new ArrayList<SuperZeroModel>();
         String sql = "SELECT * FROM superZ;";
         try {
@@ -49,7 +48,7 @@ public class SuperZConnection {
 
     //Post Method
     public void PostNewSuperZ(SuperZeroModel superZToPost){
-        _connection = _getConnection.GetConnection();
+        _connection = _getConnection.getConnection();
         String sql ="INSERT INTO superZ(Name, PhoneNumber, Latitude, Longitude, City, BusinessIncidents) VALUES(?, ?, ?, ?, ?, ?);";
         if(superZToPost != null){
             try{

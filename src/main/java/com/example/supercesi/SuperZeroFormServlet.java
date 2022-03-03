@@ -9,8 +9,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
 
 @WebServlet(name = "SuperZeroFormServlet", value = "/SuperZeroFormServlet")
 public class SuperZeroFormServlet extends HttpServlet {
@@ -30,7 +28,7 @@ public class SuperZeroFormServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ConnectionForm form = new ConnectionForm();
         SuperZeroModel superZ = form.newSuperZ(request);
-        SuperZConnection superZConnection = new SuperZConnection(_getConnection.GetConnection());
+        SuperZConnection superZConnection = new SuperZConnection(_getConnection.getConnection());
         superZConnection.PostNewSuperZ(superZ);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }

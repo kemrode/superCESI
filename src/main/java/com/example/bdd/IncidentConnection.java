@@ -4,7 +4,10 @@ import com.example.beans.IncidentModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class IncidentConnection {
 
@@ -16,6 +19,25 @@ public class IncidentConnection {
     }
 
     //Get Method
+    public List<IncidentModel> GetAllIncident(){
+        List<IncidentModel> listIncidents = new ArrayList<IncidentModel>();
+        String sql = "SELECT * FROM incident;";
+        try{
+            PreparedStatement preparedStatement = _connection.prepareStatement(sql);
+            ResultSet result = preparedStatement.executeQuery();
+            while(result.next()){
+                IncidentModel incident = new IncidentModel();
+                incident.setCity(result.getString("city"));
+                incident.setType(result.getString("type"));
+                listIncidents.add(incident);
+            }
+            result.close();
+            preparedStatement.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return listIncidents;
+    }
 
     //Post Method
     public void PostNewIncident(IncidentModel incidentToPost){

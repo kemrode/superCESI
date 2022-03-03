@@ -3,15 +3,15 @@ package com.example.bdd;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.PreparedStatement;
 
 public class GetConnection {
 
     private String _connectionUrl = "jdbc:mysql://127.0.0.1:3306/superCesi_db";
     private Connection connection = null;
 
-    public Connection GetConnection(){
+    public GetConnection(){};
+
+    public Connection getConnection(){
         try {
             loadDataBase();
             connection = DriverManager.getConnection(_connectionUrl,"root","");

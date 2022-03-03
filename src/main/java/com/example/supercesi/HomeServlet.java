@@ -8,7 +8,6 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "HomeServlet", value = "/HomeServlet")
@@ -22,7 +21,7 @@ public class HomeServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SuperZConnection connectionBDD = new SuperZConnection(_getConnection.GetConnection());
+        SuperZConnection connectionBDD = new SuperZConnection(_getConnection.getConnection());
         List<SuperZeroModel> list = connectionBDD.GetAllSuperZ();
         request.setAttribute("list",list);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
