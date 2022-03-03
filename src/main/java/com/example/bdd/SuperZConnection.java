@@ -14,6 +14,11 @@ public class SuperZConnection {
     private GetConnection _getConnection = new GetConnection();
     private Connection _connection;
 
+    //Constructor
+    public SuperZConnection(Connection connection){
+        _connection = connection;
+    }
+
     //Get Methods
     public List<SuperZeroModel> GetAllSuperZ(){
         _connection = _getConnection.GetConnection();
@@ -22,7 +27,6 @@ public class SuperZConnection {
         try {
             PreparedStatement preparedStatement = _connection.prepareStatement(sql);
             ResultSet result = preparedStatement.executeQuery();
-
             while (result.next()){
                 SuperZeroModel superZ = new SuperZeroModel();
                 superZ.Id = result.getInt("Id");
@@ -63,5 +67,4 @@ public class SuperZConnection {
             }
         }
     }
-
 }

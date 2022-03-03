@@ -1,5 +1,6 @@
 package com.example.supercesi;
 
+import com.example.bdd.GetConnection;
 import com.example.bdd.SuperZConnection;
 import com.example.beans.SuperZeroModel;
 import com.example.forms.ConnectionForm;
@@ -18,6 +19,8 @@ public class SuperZeroFormServlet extends HttpServlet {
         super();
     }
 
+    private GetConnection _getConnection = new GetConnection();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
@@ -27,7 +30,7 @@ public class SuperZeroFormServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ConnectionForm form = new ConnectionForm();
         SuperZeroModel superZ = form.newSuperZ(request);
-        SuperZConnection superZConnection = new SuperZConnection();
+        SuperZConnection superZConnection = new SuperZConnection(_getConnection.GetConnection());
         superZConnection.PostNewSuperZ(superZ);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }

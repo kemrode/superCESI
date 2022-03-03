@@ -14,5 +14,8 @@
         <input type="text" name="city" placeholder="quelle ville protégez-vous ?">
     </div>
     <%@include file="IncidentForm.jsp"%>
+    <div class="validateBtn">
+        <input type="submit" name="validateBtn" value="Valider">
+    </div>
 </form>
 <%--<script src="<k:url value="/scripts/SuperZeroFormScript.js"/>"/>--%>

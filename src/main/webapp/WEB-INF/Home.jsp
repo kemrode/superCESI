@@ -25,7 +25,15 @@
             </form>
             <k:choose>
                 <k:when test="${selectedButton == 'incident'}">
-                    <%@include file="IncidentForm.jsp"%>
+                    <form method="post" class="incidentForm" action="./Incident">
+                        <%@include file="IncidentForm.jsp"%>
+                        <div class="infoBox">
+                            <input type="text" name="incidentCity" placeholder="Où se trouve le problème ?">
+                        </div>
+                        <div class="validateBtn">
+                            <input type="submit" name="validateBtn" value="Valider">
+                        </div>
+                    </form>
                 </k:when>
                 <k:when test="${selectedButton == 'superZ'}">
                     <%@include file="SuperZeroForm.jsp"%>

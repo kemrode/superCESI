@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 
 public class ConnectionForm {
 
+    //Constructor
+    public ConnectionForm() {};
+
     public SuperZeroModel newSuperZ(HttpServletRequest request){
 
         SuperZeroModel newSuperZ = new SuperZeroModel();
@@ -16,6 +19,7 @@ public class ConnectionForm {
         newSuperZ.City = request.getParameter("city");
         newSuperZ.Longitude = "0.123456789";
         newSuperZ.Latitude = "0.123456789";
+        //intégrer les fonctions pour récupérer les checkbox
         newSuperZ.BusinessIncidents = "Incendie, Braquage, Manifestations pour la liberté";
 
         return newSuperZ;
