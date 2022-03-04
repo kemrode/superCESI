@@ -20,8 +20,8 @@ public class SuperZConnection {
     }
 
     //Get Methods
-    public List<SuperZeroModel> GetAllSuperZ(){
-        List<SuperZeroModel> allSuperZ = new ArrayList<SuperZeroModel>();
+    public ArrayList<SuperZeroModel> GetAllSuperZ(){
+        ArrayList<SuperZeroModel> allSuperZ = new ArrayList<SuperZeroModel>();
         String sql = "SELECT * FROM superZ;";
         try {
             PreparedStatement preparedStatement = _connection.prepareStatement(sql);

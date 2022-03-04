@@ -27,6 +27,7 @@ public class SuperZeroFormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ConnectionForm form = new ConnectionForm();
+        //Appel mapbox API pour obtenir Lat et Long en fonction de la ville
         SuperZeroModel superZ = form.newSuperZ(request);
         SuperZConnection superZConnection = new SuperZConnection(_getConnection.getConnection());
         superZConnection.PostNewSuperZ(superZ);

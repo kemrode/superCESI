@@ -19,7 +19,7 @@
         <div id="menuView">
         </div>
         <div id="formBox">
-            <form method="post" class="buttonsChoice">
+            <form method="post" class="buttonsChoice" action="./Home">
                 <input type="submit" class="selectedButton selectIncident" name="selectedButton" value="incident"/>
                 <input type="submit" class="selectedButton selectNewSuperZ" name="selectedButton" value="superZ"/>
             </form>
@@ -48,9 +48,14 @@
         </div>
         <div class="SuperCardScrollview">
             <ul>
-                <k:forEach var="superZ" items="${ list }">
-                    <li><k:out value="${ superZ }"/></li>
+                <k:forEach items="${list}" var="z">
+                    <p>${z.city}</p>
                 </k:forEach>
+
+                <%--                    <div class="superZGet">--%>
+                <%--                        <p>${superZ}</p>--%>
+                <%--                        <label class="superZCity"></label>--%>
+                <%--                    </div>--%>
             </ul>
         </div>
     </div>
