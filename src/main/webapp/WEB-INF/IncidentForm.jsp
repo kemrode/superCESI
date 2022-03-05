@@ -4,37 +4,37 @@
             <input class="incident-single" type="checkbox" name="incident" value="covid20">Centre de vaccination vidoc20
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="fireAlert">Incendies
+            <input class="incident-single" type="checkbox" name="incident" value="Incendies">Incendies
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="roadInjured">Accidents routiers
+            <input class="incident-single" type="checkbox" name="incident" value="Accidents routiers">Accidents routiers
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="riverInjured">Accidents fluviaux
+            <input class="incident-single" type="checkbox" name="incident" value="Accidents fluviaux">Accidents fluviaux
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="airInjured">Accidents aériens
+            <input class="incident-single" type="checkbox" name="incident" value="Accidents aériens">Accidents aériens
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="crumblingInjured">Eboulements
+            <input class="incident-single" type="checkbox" name="incident" value="Eboulements">Eboulements
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="snakeInvade">Invasions de serpents
+            <input class="incident-single" type="checkbox" name="incident" value="Invasions de serpents">Invasions de serpents
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox"name="incident" value="ETInvade">Invasions extra-terrestre
+            <input class="incident-single" type="checkbox"name="incident" value="Invasions extra-terrestre">Invasions extra-terrestre
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="gasInjured">Fuite de gaz
+            <input class="incident-single" type="checkbox" name="incident" value="Fuites de gaz">Fuite de gaz
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="manifestationFreedom">Manifestations pour la liberté
+            <input class="incident-single" type="checkbox" name="incident" value="Manifestations pour la Libertés">Manifestations pour la liberté
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="holdupInjured">Braquages
+            <input class="incident-single" type="checkbox" name="incident" value="Braquages">Braquages
         </div>
         <div class="incidentCheck">
-            <input class="incident-single" type="checkbox" name="incident" value="greatEscape">Evasion
+            <input class="incident-single" type="checkbox" name="incident" value="Evasions">Evasion
         </div>
     </label>
 </div>

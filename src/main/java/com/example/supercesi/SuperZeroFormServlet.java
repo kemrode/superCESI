@@ -21,16 +21,21 @@ public class SuperZeroFormServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HomeServlet.GetSuperZDisplaying(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RegisterNewSuperZInDB(request);
+        HomeServlet.GetSuperZDisplaying(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+    }
+
+    private void RegisterNewSuperZInDB(HttpServletRequest request){
         ConnectionForm form = new ConnectionForm();
-        //Appel mapbox API pour obtenir Lat et Long en fonction de la ville
         SuperZeroModel superZ = form.newSuperZ(request);
         SuperZConnection superZConnection = new SuperZConnection(_getConnection.getConnection());
         superZConnection.PostNewSuperZ(superZ);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 }

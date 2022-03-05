@@ -12,18 +12,29 @@ import java.io.IOException;
 
 @WebServlet(name = "IncidentServlet", value = "/IncidentServlet")
 public class IncidentServlet extends HttpServlet {
+
+    public IncidentServlet(){
+        super();
+    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HomeServlet.GetSuperZDisplaying(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/IncidentForm.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        NewIncidentToRegisterInDB(request);
+        HomeServlet.GetSuperZDisplaying(request, response);
+        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+    }
+
+    private void NewIncidentToRegisterInDB(HttpServletRequest request){
         IncidentForm form = new IncidentForm();
-        IncidentModel newIncident = form.newIncident(request);
         GetConnection connection = new GetConnection();
+        IncidentModel newIncident = form.newIncident(request);
         IncidentConnection incidentConnection = new IncidentConnection(connection.getConnection());
         incidentConnection.PostNewIncident(newIncident);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 }

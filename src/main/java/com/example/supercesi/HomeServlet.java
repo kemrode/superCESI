@@ -18,13 +18,11 @@ public class HomeServlet extends HttpServlet {
     public HomeServlet(){
         super();
     }
-    private GetConnection _getConnection = new GetConnection();
+    private static GetConnection _getConnection = new GetConnection();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        SuperZConnection connectionBDD = new SuperZConnection(_getConnection.getConnection());
-        ArrayList<SuperZeroModel> list = connectionBDD.GetAllSuperZ();
-        request.setAttribute("list",list);
+        GetSuperZDisplaying(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
@@ -33,5 +31,11 @@ public class HomeServlet extends HttpServlet {
         String selectedChoice = request.getParameter("selectedButton");
         request.setAttribute("selectedButton", selectedChoice);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+    }
+
+    public static void GetSuperZDisplaying(HttpServletRequest request, HttpServletResponse response){
+        SuperZConnection connectionBDD = new SuperZConnection(_getConnection.getConnection());
+        ArrayList<SuperZeroModel> list = connectionBDD.GetAllSuperZ();
+        request.setAttribute("list",list);
     }
 }

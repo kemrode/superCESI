@@ -4,14 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>com.example.supercesi.TestServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/Accueil</url-pattern>
-    </servlet-mapping>
-    <servlet>
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>com.example.supercesi.HomeServlet</servlet-class>
     </servlet>
