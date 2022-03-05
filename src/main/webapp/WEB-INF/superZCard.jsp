@@ -19,3 +19,4 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>

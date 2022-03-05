@@ -9,7 +9,7 @@ function GetUserPosition(){
 }
 //2=> récupérer cette position en créant des éléments de type input hidden dans le formulaire quand on créé un nouvel incident
 function GetLocalisationFromCity(){
-    const call = url + city.toString() +".json";
+    const call = url + city +".json";
     let request = new XMLHttpRequest();
     request.open('GET',call);
     request.responseType = 'json';
