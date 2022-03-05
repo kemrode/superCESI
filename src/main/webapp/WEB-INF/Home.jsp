@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/MapBox.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/SuperZForm.css"/>
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/incidentDeclaration.css"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/Pages/superZCard.css"/>
     <title>Super0</title>
 </head>
 <body>
@@ -47,16 +48,9 @@
             <%@ include file="mapBox.jsp"%>
         </div>
         <div class="SuperCardScrollview">
-            <ul>
-                <k:forEach items="${list}" var="z">
-                    <p>${z.city}</p>
-                </k:forEach>
-
-                <%--                    <div class="superZGet">--%>
-                <%--                        <p>${superZ}</p>--%>
-                <%--                        <label class="superZCity"></label>--%>
-                <%--                    </div>--%>
-            </ul>
+            <k:forEach items="${list}" var="z">
+                <%@include file="superZCard.jsp"%>
+            </k:forEach>
         </div>
     </div>
 </div>
