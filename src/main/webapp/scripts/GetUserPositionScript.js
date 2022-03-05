@@ -1,33 +1,23 @@
-let city = document.querySelector(".superZCity");
-let url = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
+GetUserPosition();
 
-GetLocalisationFromCity();
-
-//1=> fonction pour récupérer la position de l'utilisateur et l'afficher sur la carte
 function GetUserPosition(){
-    navigator.geolocation.getCurrentPosition(newPosition);
+    navigator.geolocation.getCurrentPosition(success);
 }
-//2=> récupérer cette position en créant des éléments de type input hidden dans le formulaire quand on créé un nouvel incident
-function GetLocalisationFromCity(){
-    const call = url + city +".json";
-    let request = new XMLHttpRequest();
-    request.open('GET',call);
-    request.responseType = 'json';
-    request.send();
-    request.onload = function(){
-        if(request.readyState == XMLHttpRequest.DONE){
-            if(request.status == 200){
-                let response = request.response;
-                //dessiner un icône sur la carte à cet emplacement
+//Success function Posit
+function success(pos){
+    var coord = pos.coords;
+    CreateInputElement(`${coord.latitude}`,"latitude");
+    CreateInputElement(`${coord.longitude}`,"longitude");
+}
 
-            }else {
-                alert('An error occured when call API.')
-            }
-        }
-    }
+function CreateInputElement(posit, name){
+    let form = document.querySelector(".infoBox");
+    let inputElement = document.createElement('input');
+    inputElement.setAttribute("type","hidden");
+    inputElement.setAttribute("value",`${posit}`);
+    inputElement.setAttribute("name",`${name}`)
+    form.append(inputElement);
 }
-//3=> fonction pour convertir en coordonnées géo la ville du héros pour l'afficher
-//4=> communiquer avec l'api de mapbox
 
 
 

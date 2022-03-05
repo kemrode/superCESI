@@ -29,6 +29,8 @@ public class IncidentConnection {
                 IncidentModel incident = new IncidentModel();
                 incident.setCity(result.getString("city"));
                 incident.setType(result.getString("type"));
+                incident.setLatitude(result.getString("Latitude"));
+                incident.setLongitude(result.getString("Longitude"));
                 listIncidents.add(incident);
             }
             result.close();
@@ -41,12 +43,14 @@ public class IncidentConnection {
 
     //Post Method
     public void PostNewIncident(IncidentModel incidentToPost){
-        String sql = "INSERT INTO incident(city, type) VALUES(?,?);";
+        String sql = "INSERT INTO incident(city, Latitude, Longitude, type) VALUES(?,?,?,?);";
         if(incidentToPost != null){
             try{
                 PreparedStatement preparedStatement = _connection.prepareStatement(sql);
                 preparedStatement.setString(1, incidentToPost.getCity());
-                preparedStatement.setString(2, incidentToPost.getType());
+                preparedStatement.setString(2,incidentToPost.getLatitude());
+                preparedStatement.setString(3, incidentToPost.getLongitude());
+                preparedStatement.setString(4, incidentToPost.getType());
                 preparedStatement.executeUpdate();
                 preparedStatement.close();
             } catch (SQLException e){

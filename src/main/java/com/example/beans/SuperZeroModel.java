@@ -11,59 +11,53 @@ public class SuperZeroModel {
     public String Latitude;
     public String Longitude;
     public String BusinessIncidents;
+    public String Quote;
 
+    public String getQuote() {
+        return Quote;
+    }
+    public void setQuote(String quote) {
+        Quote = quote;
+    }
     public int getId() {
         return Id;
     }
-
     public void setId(int id) {
         Id = id;
     }
-
     public String getName() {
         return Name;
     }
-
     public void setName(String name) {
         Name = name;
     }
-
     public String getPhoneNumber() {
         return PhoneNumber;
     }
-
     public void setPhoneNumber(String phoneNumber) {
         PhoneNumber = phoneNumber;
     }
-
     public String getCity() {
         return City;
     }
-
     public void setCity(String city) {
         City = city;
     }
-
     public String getLatitude() {
         return Latitude;
     }
-
     public void setLatitude(String latitude) {
         Latitude = latitude;
     }
-
     public String getLongitude() {
         return Longitude;
     }
-
     public void setLongitude(String longitude) {
         Longitude = longitude;
     }
-
     public String getBusinessIncidents() {
         return BusinessIncidents;
     }
-
     public void setBusinessIncidents(String businessIncidents) {
         BusinessIncidents = businessIncidents;
     }

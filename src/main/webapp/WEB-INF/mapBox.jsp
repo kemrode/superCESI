@@ -4,9 +4,20 @@
 <script>
     mapboxgl.accessToken = 'pk.eyJ1Ijoia2Vtcm9kZSIsImEiOiJjbDAzbmkycjkwZXB6M25xZGkxNzFtNGFtIn0.H_y4SaibmfnmyxzT9VfOww';
     const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/mapbox/streets-v11', // style URL
-        center: [-74.5, 40], // starting position [lng, lat]
-        zoom: 9 // starting zoom
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [1.1025, 49.44306],
+        zoom: 5
     });
+    <k:forEach var="incident" items="${incidentList}" varStatus="loop">
+    console.log(`${incident.latitude}`)
+    console.log(`${incident.longitude}`)
+    var test = testFunc(`${incident.longitude}`,`${incident.latitude}`)
+
+    function testFunc(latitude, longitude){
+        const marker = new mapboxgl.Marker({
+            color: "#de075e",
+        }).setLngLat([latitude,longitude]).addTo(map);
+    }
+    </k:forEach>
 </script>

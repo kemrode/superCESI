@@ -9,7 +9,7 @@
     </div>
     <div class="businessBox">
         <div class="placeOfWork">
-            <p>${z.city}</p>
+            <p class="superZCity">${z.city}</p>
         </div>
         <div class="quotelb">
 
@@ -19,4 +19,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>

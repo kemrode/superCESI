@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.supercesi.MapServlet.GetAllIncidents;
+
 @WebServlet(name = "HomeServlet", value = "/HomeServlet")
 public class HomeServlet extends HttpServlet {
 
@@ -18,11 +20,12 @@ public class HomeServlet extends HttpServlet {
     public HomeServlet(){
         super();
     }
-    private static GetConnection _getConnection = new GetConnection();
+    public static GetConnection _getConnection = new GetConnection();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GetSuperZDisplaying(request, response);
+        GetAllIncidents(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 

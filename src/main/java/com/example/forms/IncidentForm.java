@@ -12,6 +12,8 @@ public class IncidentForm {
     public IncidentModel newIncident(HttpServletRequest request){
         IncidentModel newIncident = new IncidentModel();
         newIncident.setCity(request.getParameter("incidentCity"));
+        newIncident.setLatitude(request.getParameter("latitude"));
+        newIncident.setLongitude(request.getParameter("longitude"));
         String[] incident = request.getParameterValues("incident");
         String checked = "";
         for(int i=0;i<incident.length;i++){
