@@ -10,6 +10,8 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+import static com.example.supercesi.MapServlet.GetAllIncidents;
+
 @WebServlet(name = "IncidentServlet", value = "/IncidentServlet")
 public class IncidentServlet extends HttpServlet {
 
@@ -20,6 +22,7 @@ public class IncidentServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HomeServlet.GetSuperZDisplaying(request, response);
+        GetAllIncidents(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/IncidentForm.jsp").forward(request, response);
     }
 
@@ -27,6 +30,7 @@ public class IncidentServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         NewIncidentToRegisterInDB(request);
         HomeServlet.GetSuperZDisplaying(request, response);
+        GetAllIncidents(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 

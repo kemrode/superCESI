@@ -4,5 +4,6 @@
 .HomeMapSuperView{
   @include flexColumnJustifySpaceEvenly();
   height: auto;
-  flex: 4;
+  //flex: 4;
+  width: 75%;
 }

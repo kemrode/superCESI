@@ -13,9 +13,11 @@
     <div class="infoBox">
         <input type="text" name="city" placeholder="quelle ville protégez-vous ?">
     </div>
+    <div class="infoBox">
+        <input type="text" name="quote" placeholder="Une phrase pour vous résumer...">
+    </div>
     <%@include file="IncidentForm.jsp"%>
     <div class="validateBtn">
         <input type="submit" name="validateBtn" value="Valider">
     </div>
 </form>
-<%--<script src="<k:url value="/scripts/SuperZeroFormScript.js"/>"/>--%>

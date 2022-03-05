@@ -4,6 +4,7 @@
 .MapBox{
   @include flexRowJustifyCenter();
   width: 100%;
-  height: 75%;
-  background-color: red;
+  //height: 85%;
+  flex: 5;
+  //background-color: red;
 }

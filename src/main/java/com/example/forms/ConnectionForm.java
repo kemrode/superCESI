@@ -13,12 +13,10 @@ public class ConnectionForm {
     //Public Method
     public SuperZeroModel newSuperZ(HttpServletRequest request){
         SuperZeroModel newSuperZ = new SuperZeroModel();
-//        Supprimer les latitude et longitude que l'on récupèrera pour l'affichage grâce à la ville
-        newSuperZ.Longitude = "0.123456789";
-        newSuperZ.Latitude = "0.123456789";
         newSuperZ.setName(request.getParameter("superName"));
         newSuperZ.setPhoneNumber(request.getParameter("superPhone"));
         newSuperZ.setCity(request.getParameter("city"));
+        newSuperZ.setQuote(request.getParameter("quote"));
         newSuperZ.setBusinessIncidents(getCheckedBoxes(request));
         return newSuperZ;
     }

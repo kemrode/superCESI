@@ -1,11 +1,11 @@
 @import "../Utils/mixin.scss";
 @import "../Utils/variables.scss";
 
-.incidentDeclaring{
+#incidentForm{
   @include flexColumnJustifySpaceEvenly();
   align-items: center;
   width: 100%;
-  flex: 5;
+  height: 80%;
   overflow-x: hidden;
   overflow-y: auto;
   &::-webkit-scrollbar{
@@ -13,12 +13,18 @@
   }
 }
 
+.incidentDeclaring{
+  @include flexColumnJustifySpaceEvenly();
+  align-items: center;
+  width: 100%;
+  flex: 5;
+}
+
 #incidentsBox{
   @include flexColumnJustifySpaceEvenly();
   align-items: center;
   width: 100%;
-  height: 100%;
-  flex: 1;
+  flex: 3;
 }
 
 .incident {
@@ -30,4 +36,19 @@
 .incidentCheck{
   @include flexRowJustifyCenter();
   align-items: center;
+}
+
+#locationChoice{
+  @include flexRowJustifySpaceEvenly();
+  align-items: center;
+  width: 100%;
+  height: 5vh;
+}
+
+.getPosit{
+  @include flexRowJustifyCenter();
+  align-items: center;
+  width: 25%;
+  height: 100%;
+
 }

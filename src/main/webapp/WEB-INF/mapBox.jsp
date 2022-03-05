@@ -10,9 +10,7 @@
         zoom: 5
     });
     <k:forEach var="incident" items="${incidentList}" varStatus="loop">
-    console.log(`${incident.latitude}`)
-    console.log(`${incident.longitude}`)
-    var test = testFunc(`${incident.longitude}`,`${incident.latitude}`)
+    var positMarker = testFunc(`${incident.longitude}`,`${incident.latitude}`)
 
     function testFunc(latitude, longitude){
         const marker = new mapboxgl.Marker({

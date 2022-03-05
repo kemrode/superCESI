@@ -2,7 +2,10 @@
 @import "../Utils/variables";
 
 .HomeMenuView{
-  background-color: blue;
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   @include flexColumn();
   flex: 1;
   height: auto;
@@ -11,16 +14,21 @@
 #menuView{
   @include flexColumnJustifySpaceEvenly();
   align-items: center;
-  //width: 100%;
-  //height: 25%;
   flex: 1;
-  background-color: aqua;
 }
 
 #formBox{
-  @include flexColumnJustifyCenter();
-  //width: 100%;
-  //height: 75%;
+  @include flexColumnJustifySpaceEvenly();
+  align-items: start;
   flex: 3;
-  background-color: bisque;
+  overflow-y: auto;
+  overflow-x: hidden;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+.dead{
+  width: 100%;
+  height: 90%;
 }

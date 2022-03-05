@@ -15,6 +15,7 @@
     <title>Super0</title>
 </head>
 <body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <div class="MainView">
     <div class="HomeMenuView">
         <div id="menuView">
@@ -26,60 +27,48 @@
             </form>
             <k:choose>
                 <k:when test="${selectedButton == 'incident'}">
-                    <form method="post" class="incidentForm" action="./Incident">
+                    <form method="post" id="incidentForm" action="./Incident">
                         <%@include file="IncidentForm.jsp"%>
-                        <div class="infoBox">
-                            <input type="text" name="incidentCity" placeholder="Où se trouve le problème ?">
-                            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>
+                        <div id="locationChoice">
+                            <div class="infoBox">
+                                <input type="text" name="incidentCity" placeholder="Où se trouve le problème ?">
+                            </div>
+                            <div class="getPosit">
+                                <label>
+                                    <input type="checkbox" name="myPosit" value="get">Utiliser mon GPS
+                                </label>
+                            </div>
+                            <k:if test="${ locationMethod == 'get'}">
+                                <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>
+                            </k:if>
                         </div>
                         <div class="validateBtn">
                             <input type="submit" name="validateBtn" value="Valider">
                         </div>
+                        <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/NewIncidentTypeScript.js"></script>
                     </form>
                 </k:when>
                 <k:when test="${selectedButton == 'superZ'}">
                     <%@include file="SuperZeroForm.jsp"%>
+                    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/LimitationCheckBoxScript.js"></script>
                 </k:when>
-                <k:otherwise></k:otherwise>
+                <k:otherwise>
+                    <div class="dead">
+
+                    </div>
+                </k:otherwise>
             </k:choose>
         </div>
     </div>
     <div class="HomeMapSuperView">
         <div class="MapBox">
             <%@ include file="mapBox.jsp"%>
-<%--            <script>--%>
-<%--                <k:forEach var="incident" items="${incidentList}" varStatus="loop">--%>
-<%--                newIncidentToDisplay(`${incident.latitude}`,`${incident.longitude}`)--%>
-<%--                function newIncidentToDisplay(latitude, longitude){--%>
-<%--                    console.log(latitude);--%>
-<%--                    console.log(longitude);--%>
-<%--                    const marker = new mapboxgl.Marker()--%>
-<%--                        .setLngLat([latitude,longitude])--%>
-<%--                        .addTo(map);--%>
-<%--                }--%>
-<%--                &lt;%&ndash;                <script>&ndash;%&gt;--%>
-<%--                &lt;%&ndash;var incident = `${incident}`;&ndash;%&gt;--%>
-<%--                &lt;%&ndash;console.log(`${incident.latitude}`);&ndash;%&gt;--%>
-<%--                &lt;%&ndash;const marker = new mapboxgl.Marker()&ndash;%&gt;--%>
-<%--                &lt;%&ndash;    .setLngLat([`${incident.latitude}`,`${incident.longitude}`])&ndash;%&gt;--%>
-<%--                &lt;%&ndash;    .addTo(map);&ndash;%&gt;--%>
-<%--                &lt;%&ndash;                </script>&ndash;%&gt;--%>
-<%--                </k:forEach>--%>
-<%----%>
-<%--            </script>--%>
-<%--            <k:forEach var="incident" items="${incidentList}">--%>
-<%--&lt;%&ndash;                <script>&ndash;%&gt;--%>
-<%--                    &lt;%&ndash;var incident = `${incident}`;&ndash;%&gt;--%>
-<%--                    &lt;%&ndash;console.log(`${incident.latitude}`);&ndash;%&gt;--%>
-<%--                    &lt;%&ndash;const marker = new mapboxgl.Marker()&ndash;%&gt;--%>
-<%--                    &lt;%&ndash;    .setLngLat([`${incident.latitude}`,`${incident.longitude}`])&ndash;%&gt;--%>
-<%--                    &lt;%&ndash;    .addTo(map);&ndash;%&gt;--%>
-<%--&lt;%&ndash;                </script>&ndash;%&gt;--%>
-<%--            </k:forEach>--%>
         </div>
         <div class="SuperCardScrollview">
             <k:forEach items="${list}" var="z">
-                <%@include file="superZCard.jsp"%>
+                <div class="card">
+                    <%@include file="superZCard.jsp"%>
+                </div>
             </k:forEach>
         </div>
     </div>

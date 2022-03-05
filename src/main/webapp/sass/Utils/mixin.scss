@@ -75,3 +75,11 @@
     opacity: 1;
   }
 }
+
+//Style for cardview text
+@mixin CardviewText{
+  font-weight: bold;
+  font-style: normal;
+  font-size: 1.2em;
+  color: white;
+}
