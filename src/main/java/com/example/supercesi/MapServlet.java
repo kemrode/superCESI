@@ -25,6 +25,7 @@ public class MapServlet extends HttpServlet {
 
     }
 
+    //Public Methods
     public static void GetAllIncidents(HttpServletRequest request, HttpServletResponse response){
         IncidentConnection incidentConnection = new IncidentConnection(HomeServlet._getConnection.getConnection());
         List<IncidentModel> incidentList = incidentConnection.GetAllIncident();

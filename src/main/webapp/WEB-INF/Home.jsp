@@ -38,9 +38,7 @@
                                     <input type="checkbox" name="myPosit" value="get">Utiliser mon GPS
                                 </label>
                             </div>
-                            <k:if test="${ locationMethod == 'get'}">
-                                <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>
-                            </k:if>
+                            <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetUserPositionScript.js"></script>
                         </div>
                         <div class="validateBtn">
                             <input type="submit" name="validateBtn" value="Valider">
@@ -50,6 +48,7 @@
                 </k:when>
                 <k:when test="${selectedButton == 'superZ'}">
                     <%@include file="SuperZeroForm.jsp"%>
+                    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>
                     <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/LimitationCheckBoxScript.js"></script>
                 </k:when>
                 <k:otherwise>

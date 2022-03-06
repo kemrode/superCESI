@@ -35,6 +35,7 @@ public class SuperZConnection {
                 superZ.Latitude = result.getString("Latitude");
                 superZ.Longitude = result.getString("Longitude");
                 superZ.BusinessIncidents = result.getString("BusinessIncidents");
+                superZ.Quote = result.getString("Quote");
                 allSuperZ.add(superZ);
             }
             result.close();
@@ -49,7 +50,7 @@ public class SuperZConnection {
     //Post Method
     public void PostNewSuperZ(SuperZeroModel superZToPost){
         _connection = _getConnection.getConnection();
-        String sql ="INSERT INTO superZ(Name, PhoneNumber, Latitude, Longitude, City, BusinessIncidents) VALUES(?, ?, ?, ?, ?, ?);";
+        String sql ="INSERT INTO superZ(Name, PhoneNumber, Latitude, Longitude, City, BusinessIncidents, Quote, Picture) VALUES(?, ?, ?, ?, ?, ?, ?, ?);";
         if(superZToPost != null){
             try{
                 PreparedStatement preparedStatement = _connection.prepareStatement(sql);
@@ -59,6 +60,8 @@ public class SuperZConnection {
                 preparedStatement.setString(4, superZToPost.getLongitude());
                 preparedStatement.setString(5, superZToPost.getCity());
                 preparedStatement.setString(6, superZToPost.getBusinessIncidents());
+                preparedStatement.setString(7, superZToPost.getQuote());
+                preparedStatement.setString(8, superZToPost.getPicture());
                 preparedStatement.executeUpdate();
                 preparedStatement.close();
             }catch (SQLException e){

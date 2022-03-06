@@ -12,11 +12,11 @@
             <p class="superZCity">${z.city}</p>
         </div>
         <div class="quotelb">
-
+            <p class="superZCity">${z.quote}</p>
         </div>
         <div class="skillBox">
-            <p><span>${z.businessIncidents}</span></p>
+            <p>${z.businessIncidents}</p>
         </div>
     </div>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>
 </div>
-<script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>

@@ -11,7 +11,7 @@
         <input type="tel" name="superPhone" placeholder="Votre super-Téléphone" >
     </div>
     <div class="infoBox">
-        <input type="text" name="city" placeholder="quelle ville protégez-vous ?">
+        <input type="text" class="superZCity" name="city" placeholder="quelle ville protégez-vous ?">
     </div>
     <div class="infoBox">
         <input type="text" name="quote" placeholder="Une phrase pour vous résumer...">

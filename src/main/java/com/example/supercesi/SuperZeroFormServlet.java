@@ -30,15 +30,16 @@ public class SuperZeroFormServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RegisterNewSuperZInDB(request);
+        RegisterNewSuperZInDB(request, response);
         HomeServlet.GetSuperZDisplaying(request, response);
         GetAllIncidents(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
-    private void RegisterNewSuperZInDB(HttpServletRequest request){
+    private void RegisterNewSuperZInDB(HttpServletRequest request, HttpServletResponse response){
         ConnectionForm form = new ConnectionForm();
         SuperZeroModel superZ = form.newSuperZ(request);
+        request.setAttribute("newSuperZ", superZ);
         SuperZConnection superZConnection = new SuperZConnection(_getConnection.getConnection());
         superZConnection.PostNewSuperZ(superZ);
     }

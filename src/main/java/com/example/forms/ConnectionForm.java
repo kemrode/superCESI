@@ -18,6 +18,8 @@ public class ConnectionForm {
         newSuperZ.setCity(request.getParameter("city"));
         newSuperZ.setQuote(request.getParameter("quote"));
         newSuperZ.setBusinessIncidents(getCheckedBoxes(request));
+        newSuperZ.setLatitude(request.getParameter("latitude"));
+        newSuperZ.setLongitude(request.getParameter("longitude"));
         return newSuperZ;
     }
 

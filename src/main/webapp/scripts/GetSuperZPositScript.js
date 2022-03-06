@@ -1,4 +1,3 @@
-
 GetLocalisationFromCity();
 
 function GetLocalisationFromCity(){
@@ -14,6 +13,10 @@ function GetLocalisationFromCity(){
         if(request.readyState == XMLHttpRequest.DONE){
             if(request.status == 200){
                 let response = request.response;
+                let coord = response.features['0'].geometry.coordinates;
+                console.log(coord);
+                CreateInputElement(coord.latitude,"latitude");
+                CreateInputElement(coord.longitude,"longitude");
             }else {
                 alert('An error occured when call API.')
             }
@@ -21,6 +24,11 @@ function GetLocalisationFromCity(){
     }
 }
 
-
-
-
+function CreateInputElement(posit, name){
+    let form = document.querySelector(".infoBox");
+    let inputElement = document.createElement('input');
+    inputElement.setAttribute("type","hidden");
+    inputElement.setAttribute("value",posit);
+    inputElement.setAttribute("name",name)
+    form.append(inputElement);
+}

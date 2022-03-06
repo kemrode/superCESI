@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.supercesi.IncidentServlet.GetSuperZIncidentMatching;
 import static com.example.supercesi.MapServlet.GetAllIncidents;
 
 @WebServlet(name = "HomeServlet", value = "/HomeServlet")
@@ -26,6 +27,8 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GetSuperZDisplaying(request, response);
         GetAllIncidents(request, response);
+//        List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
+//        request.setAttribute("listSuperZ", listSuperZMatching);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
