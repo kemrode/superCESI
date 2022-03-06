@@ -20,4 +20,5 @@
     <div class="validateBtn">
         <input type="submit" name="validateBtn" value="Valider">
     </div>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>
 </form>

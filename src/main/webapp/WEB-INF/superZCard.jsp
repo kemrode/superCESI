@@ -18,5 +18,4 @@
             <p>${z.businessIncidents}</p>
         </div>
     </div>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>
 </div>

@@ -48,7 +48,6 @@
                 </k:when>
                 <k:when test="${selectedButton == 'superZ'}">
                     <%@include file="SuperZeroForm.jsp"%>
-                    <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/GetSuperZPositScript.js"></script>
                     <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/LimitationCheckBoxScript.js"></script>
                 </k:when>
                 <k:otherwise>
@@ -65,6 +64,7 @@
         </div>
         <div class="SuperCardScrollview">
             <k:forEach items="${list}" var="z">
+<%--                faire le getSuperZPosition ici, puis vérifier si nouvel incident et afficher nvlle liste--%>
                 <div class="card">
                     <%@include file="superZCard.jsp"%>
                 </div>
