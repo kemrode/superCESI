@@ -83,3 +83,11 @@
   font-size: 1.2em;
   color: white;
 }
+
+@mixin responsivCardviewText{
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.9em;
+  color: white;
+
+}

@@ -31,3 +31,15 @@
     padding-left: 15px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .formulaire{
+    position: absolute;
+    z-index: 2;
+    height: 100vh;
+    background: #373B44;
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+    background: linear-gradient(to right, #4286f4, #373B44);
+  }
+
+}

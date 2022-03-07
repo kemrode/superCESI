@@ -19,3 +19,11 @@
 .selectNewSuperZ{
   background-color: darkgreen;
 }
+
+@media only screen and (max-width: 600px) {
+  .buttonsChoice{
+    position: relative;
+    z-index: 1;
+  }
+
+}

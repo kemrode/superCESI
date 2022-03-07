@@ -1,10 +1,11 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <div class="cardView">
     <div class="topView">
         <div class="nameLb">
             <p>${z.name}</p>
         </div>
         <div class="pictureBox">
-
+            <p>${z.phoneNumber}</p>
         </div>
     </div>
     <div class="businessBox">

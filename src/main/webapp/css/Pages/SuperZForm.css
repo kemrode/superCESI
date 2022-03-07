@@ -35,6 +35,16 @@
   padding-left: 15px;
 }
 
+@media only screen and (max-width: 600px) {
+  .formulaire {
+    position: absolute;
+    z-index: 2;
+    height: 100vh;
+    background: #373B44;
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);
+    background: linear-gradient(to right, #4286f4, #373B44);
+  }
+}
 .validateBtn {
   margin-bottom: 15px;
   margin-top: 15px;
@@ -89,6 +99,13 @@
 
 .selectNewSuperZ {
   background-color: darkgreen;
+}
+
+@media only screen and (max-width: 600px) {
+  .buttonsChoice {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 /*# sourceMappingURL=SuperZForm.css.map */
