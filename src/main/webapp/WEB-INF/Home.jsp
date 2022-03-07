@@ -51,9 +51,7 @@
                     <script type="text/javascript" src="${pageContext.request.contextPath}/scripts/LimitationCheckBoxScript.js"></script>
                 </k:when>
                 <k:otherwise>
-                    <div class="dead">
-
-                    </div>
+                    <div class="dead"></div>
                 </k:otherwise>
             </k:choose>
         </div>
@@ -63,12 +61,69 @@
             <%@ include file="mapBox.jsp"%>
         </div>
         <div class="SuperCardScrollview">
-            <k:forEach items="${list}" var="z">
-<%--                faire le getSuperZPosition ici, puis vérifier si nouvel incident et afficher nvlle liste--%>
-                <div class="card">
-                    <%@include file="superZCard.jsp"%>
-                </div>
-            </k:forEach>
+            <k:choose>
+                <k:when test="${isNewIncident == 'true'}">
+                    <k:forEach var="superZ" items="${listSuperZ}" varStatus="loop">
+                        <script>
+                            let card = document.querySelector(".card");
+                            card.removeChild();
+                        </script>
+                        <div class="card">
+                            <script>
+                                CompareDistance(`${superZ.latitude}`,`${superZ.longitude}`,`${newIncident.latitude}`, `${newIncident.longitude}`,`${superZ}`);
+                                //function to compare the LongLat of a superZ to LongLat of incident
+                                function CompareDistance(superZLat, superZLong, incidentLat,incidentLong,superZ){
+                                    let superZCoord = new mapboxgl.LngLat(superZLong,superZLat);
+                                    let incidentCoord = new mapboxgl.LngLat(incidentLong, incidentLat);
+                                    let meterDistance = superZCoord.distanceTo(incidentCoord);
+                                    console.log(meterDistance);
+                                    console.log(`${superZ}`);
+                                    let distance = meterDistance / 1000;
+                                    console.log(distance);
+                                    if(distance <= 50){
+                                        console.log(distance);
+                                        finalSuperZList.push(superZ);
+                                        DrawingCardView(superZ);
+                                    }
+                                    $.post("Home.jsp",finalSuperZList);
+                                }
+                                function DrawingCardView(superZ){
+                                    let scrollView = document.querySelector(".SuperCardScrollview");
+                                    console.log(scrollView);
+                                    document.querySelector(".SuperCardScrollview").append(`<div class="cardView">
+                                    <div class="topView">
+                                        <div class="nameLb">
+                                            <p>${superZ.name}</p>
+                                        </div>
+                                        <div class="pictureBox">
+
+                                        </div>
+                                    </div>
+                                    <div class="businessBox">
+                                        <div class="placeOfWork">
+                                            <p class="superZCity">${superZ.city}</p>
+                                        </div>
+                                        <div class="quotelb">
+                                            <p class="superZCity">${superZ.quote}</p>
+                                        </div>
+                                        <div class="skillBox">
+                                            <p>${superZ.businessIncidents}</p>
+                                        </div>
+                                    </div>
+                                </div>`);
+                                }
+                            </script>
+                        </div>
+                    </k:forEach>
+                </k:when>
+                <k:otherwise>
+                    <k:forEach items="${list}" var="z">
+                        <div class="card">
+                            <%@include file="superZCard.jsp"%>
+                        </div>
+                    </k:forEach>
+                </k:otherwise>
+            </k:choose>
         </div>
     </div>
 </div>

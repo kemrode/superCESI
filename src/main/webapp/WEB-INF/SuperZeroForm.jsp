@@ -16,6 +16,12 @@
     <div class="infoBox">
         <input type="text" name="quote" placeholder="Une phrase pour vous résumer...">
     </div>
+    <div class="infoBox">
+        <input type="hidden" name="latitude" class="latitude">
+    </div>
+    <div class="infoBox">
+        <input type="hidden" name="longitude" class="longitude">
+    </div>
     <%@include file="IncidentForm.jsp"%>
     <div class="validateBtn">
         <input type="submit" name="validateBtn" value="Valider">

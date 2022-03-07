@@ -29,6 +29,8 @@ public class HomeServlet extends HttpServlet {
         GetAllIncidents(request, response);
 //        List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
 //        request.setAttribute("listSuperZ", listSuperZMatching);
+//        boolean isNewIncident = false;
+//        request.setAttribute("isNewIncident", isNewIncident);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 

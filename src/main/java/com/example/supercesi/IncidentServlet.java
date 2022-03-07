@@ -33,6 +33,8 @@ public class IncidentServlet extends HttpServlet {
         GetAllIncidents(request, response);
         List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
         request.setAttribute("listSuperZ", listSuperZMatching);
+        boolean isNewIncident = true;
+        request.setAttribute("isNewIncident", isNewIncident);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
@@ -42,7 +44,10 @@ public class IncidentServlet extends HttpServlet {
 //        HomeServlet.GetSuperZDisplaying(request, response);
         List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
         request.setAttribute("listSuperZ", listSuperZMatching);
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+        boolean isNewIncident = true;
+        request.setAttribute("isNewIncident", isNewIncident);
+        response.sendRedirect(request.getContextPath() + "/Home");
+//        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
     //Public Methods
     public static List<SuperZeroModel> GetSuperZIncidentMatching(HttpServletRequest request, HttpServletResponse response){
