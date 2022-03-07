@@ -18,6 +18,7 @@ public class IncidentConnection {
         _connection = connection;
     }
 
+    //Public Methods
     //Get Method
     public List<IncidentModel> GetAllIncident(){
         List<IncidentModel> listIncidents = new ArrayList<IncidentModel>();

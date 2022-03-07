@@ -41,13 +41,11 @@ public class IncidentServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         NewIncidentToRegisterInDB(request, response);
-//        HomeServlet.GetSuperZDisplaying(request, response);
         List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
         request.setAttribute("listSuperZ", listSuperZMatching);
         boolean isNewIncident = true;
         request.setAttribute("isNewIncident", isNewIncident);
         response.sendRedirect(request.getContextPath() + "/Home");
-//        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
     //Public Methods
     public static List<SuperZeroModel> GetSuperZIncidentMatching(HttpServletRequest request, HttpServletResponse response){

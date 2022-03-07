@@ -36,7 +36,6 @@ public class SuperZeroFormServlet extends HttpServlet {
         HomeServlet.GetSuperZDisplaying(request, response);
         GetAllIncidents(request, response);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
-//        this.getServletContext().getRequestDispatcher("/WEB-INF/SuperZeroForm.jsp").forward(request, response);
     }
 
     @Override
@@ -44,8 +43,7 @@ public class SuperZeroFormServlet extends HttpServlet {
         RegisterNewSuperZInDB(request, response);
         HomeServlet.GetSuperZDisplaying(request, response);
         GetAllIncidents(request, response);
-//        test();
-        this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
+        response.sendRedirect(request.getContextPath() + "/Home");
     }
 
     private void RegisterNewSuperZInDB(HttpServletRequest request, HttpServletResponse response){

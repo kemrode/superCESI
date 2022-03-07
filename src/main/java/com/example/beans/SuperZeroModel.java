@@ -1,7 +1,5 @@
 package com.example.beans;
 
-import java.sql.Array;
-
 public class SuperZeroModel {
 
     //Public Properties

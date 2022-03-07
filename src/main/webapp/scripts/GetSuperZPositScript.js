@@ -39,15 +39,3 @@ async function GetLocalisationFromCity(){
         xhr.send();
     });
 }
-
-function CreateInputElement(posit, name){
-    let form = document.querySelector(".formulaire");
-    let inputElement = document.createElement('input');
-    inputElement.setAttribute("type","hidden");
-    inputElement.setAttribute("value",posit);
-    inputElement.setAttribute("name",name)
-    if(form != null){
-        form.append(inputElement);
-        console.log("ok");
-    }
-}

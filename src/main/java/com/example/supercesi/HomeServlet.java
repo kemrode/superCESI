@@ -27,10 +27,8 @@ public class HomeServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GetSuperZDisplaying(request, response);
         GetAllIncidents(request, response);
-//        List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
-//        request.setAttribute("listSuperZ", listSuperZMatching);
-//        boolean isNewIncident = false;
-//        request.setAttribute("isNewIncident", isNewIncident);
+        List<SuperZeroModel> listSuperZMatching = GetSuperZIncidentMatching(request, response);
+        request.setAttribute("listSuperZ", listSuperZMatching);
         this.getServletContext().getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 

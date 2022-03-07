@@ -23,45 +23,4 @@
             color: "#de075e",
         }).setLngLat([latitude,longitude]).addTo(map);
     }
-    //function to compare the LongLat of a superZ to LongLat of incident
-    function CompareDistance(superZLat, superZLong, incidentLat,incidentLong,superZ){
-        let superZCoord = new mapboxgl.LngLat(superZLong,superZLat);
-        let incidentCoord = new mapboxgl.LngLat(incidentLong, incidentLat);
-        let meterDistance = superZCoord.distanceTo(incidentCoord);
-        console.log(meterDistance);
-        let distance = meterDistance / 1000;
-        console.log(distance);
-        if(distance <= 50){
-            console.log(distance);
-            finalSuperZList.push(superZ);
-            DrawingCardView(superZ);
-        }
-        $.post("Home.jsp",finalSuperZList);
-    }
-
-    function DrawingCardView(superZ){
-        let scrollView = document.querySelector(".SuperCardScrollview");
-        console.log(scrollView);
-        document.querySelector(".SuperCardScrollview").append(`<div class="cardView">
-    <div class="topView">
-        <div class="nameLb">
-            <p>${superZ.name}</p>
-        </div>
-        <div class="pictureBox">
-
-        </div>
-    </div>
-    <div class="businessBox">
-        <div class="placeOfWork">
-            <p class="superZCity">${superZ.city}</p>
-        </div>
-        <div class="quotelb">
-            <p class="superZCity">${superZ.quote}</p>
-        </div>
-        <div class="skillBox">
-            <p>${superZ.businessIncidents}</p>
-        </div>
-    </div>
-</div>`);
-    }
 </script>
