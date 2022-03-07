@@ -3,9 +3,6 @@
   overflow-y: auto;
   width: auto;
   height: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   background: #373B44;
   background: -webkit-linear-gradient(to right, #4286f4, #373B44);
   background: linear-gradient(to right, #4286f4, #373B44);
@@ -14,6 +11,20 @@
   display: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .MainView {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .MainView {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
 body {
   margin: 0;
 }
@@ -25,11 +36,8 @@ body {
 
 .HomeMenuView {
   background: #0F2027;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -57,11 +65,21 @@ body {
   display: none;
 }
 
-.dead {
-  width: 100%;
-  height: 90%;
-}
+@media only screen and (max-width: 600px) {
+  .dead {
+    display: none;
+  }
 
+  #menuView {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .dead {
+    width: 100%;
+    height: 90%;
+  }
+}
 .MapBox {
   display: flex;
   flex-direction: row;
@@ -70,28 +88,54 @@ body {
   flex: 5;
 }
 
+@media only screen and (max-width: 600px) {
+  .MapBox {
+    flex: 4;
+  }
+}
 .SuperCardScrollview {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 25%;
   padding-left: 10px;
   overflow: auto;
   background: #0F2027;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #2C5364, #203A43, #0F2027);
   background: linear-gradient(to left, #2C5364, #203A43, #0F2027);
 }
 
+@media only screen and (max-width: 600px) {
+  .SuperCardScrollview {
+    flex: 1;
+  }
+  .SuperCardScrollview::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .SuperCardScrollview {
+    height: 25%;
+  }
+}
 .HomeMapSuperView {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: auto;
-  width: 75%;
 }
 
+@media only screen and (max-width: 600px) {
+  .HomeMapSuperView {
+    flex: 6;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .HomeMapSuperView {
+    height: auto;
+    width: 75%;
+  }
+}
 .buttonsChoice {
   display: flex;
   flex-direction: row;

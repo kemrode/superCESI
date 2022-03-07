@@ -9,12 +9,16 @@
 }
 
 
-@media only screen and (max-width: 600px) {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: start;
+@media only screen and (max-width:600px) {
+  .MainView{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+  }
 }
 
 @media only screen and (min-width: 601px) {
-  @include flexRowJustifySpaceEvenly();
+  .MainView{
+    @include flexRowJustifySpaceEvenly();
+  }
 }

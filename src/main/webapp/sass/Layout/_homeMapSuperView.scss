@@ -6,11 +6,15 @@
 }
 
 @media only screen and (max-width: 600px) {
-  flex: 6;
-  width: 100%;
+  .HomeMapSuperView{
+    flex: 6;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 601px) {
-  height: auto;
-  width: 75%;
+  .HomeMapSuperView{
+    height: auto;
+    width: 75%;
+  }
 }

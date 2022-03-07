@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25%;
   height: 100%;
 }
 
@@ -12,7 +11,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  opacity: 0.7;
   width: 15em;
   height: 90%;
   border: 0.5px solid black;
@@ -114,6 +112,21 @@
   flex-wrap: nowrap;
   width: 85%;
   height: 75%;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardView {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 601px) {
+  .card {
+    width: 25%;
+  }
+
+  .cardView {
+    opacity: 0.7;
+  }
 }
 
 /*# sourceMappingURL=superZCard.css.map */
