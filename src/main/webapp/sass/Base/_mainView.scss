@@ -3,9 +3,18 @@
 
 .MainView{
   @include webkitScrollbar();
-  @include flexRowJustifySpaceEvenly();
   background: #373B44;
   background: -webkit-linear-gradient(to right, #4286f4, #373B44);
   background: linear-gradient(to right, #4286f4, #373B44);
+}
 
+
+@media only screen and (max-width: 600px) {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+}
+
+@media only screen and (min-width: 601px) {
+  @include flexRowJustifySpaceEvenly();
 }
