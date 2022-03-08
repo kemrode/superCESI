@@ -28,7 +28,7 @@
 }
 
 .topView{
-  @include flexRowJustifySpaceEvenly();
+  @include flexRow();
   align-items: center;
   width: 100%;
   height: 25%;
@@ -120,26 +120,26 @@
   }
 
   .placeOfWork{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 
   .quotelb{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 
   .skillBox{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 
   .pictureBox{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 
   .topView{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 
   .nameLb{
-    @include CardviewText();
+    @include responsivCardviewText();
   }
 }

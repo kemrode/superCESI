@@ -117,6 +117,9 @@ body {
   .SuperCardScrollview {
     height: 25%;
   }
+  .SuperCardScrollview::-webkit-scrollbar {
+    display: none;
+  }
 }
 .HomeMapSuperView {
   display: flex;
